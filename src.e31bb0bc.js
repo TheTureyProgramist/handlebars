@@ -2566,11 +2566,9 @@ var _default = exports.default = templateFunction;
 var _products = _interopRequireDefault(require("./data-base/products.json"));
 var _products2 = _interopRequireDefault(require("./templates/products.hbs"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
-var html = (0, _products2.default)({
-  products: _products.default
-});
-document.guerySelector("section").innerHTML = html;
-console.log(html);
+var html = (0, _products2.default)(_products.default);
+var box = document.querySelector(".box");
+box.innerHTML = html;
 },{"./data-base/products.json":"data-base/products.json","./templates/products.hbs":"templates/products.hbs"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -2596,7 +2594,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63035" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63590" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
